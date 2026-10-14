@@ -6,11 +6,11 @@ export const InstagramSection: React.FC = () => {
   return (
     <section id="instagram" className="py-16 md:py-20 bg-[#F5EFE8]/70 border-t border-[#E8DFD5]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-[#E8DFD5] shadow-sm text-center relative overflow-hidden">
+        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-[#E8DFD5] shadow-xs hover:shadow-lg transition-all duration-500 hover:-translate-y-0.5 text-center relative overflow-hidden group">
           {/* Subtle decorative radial tint */}
           <div
             aria-hidden="true"
-            className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-bl from-[#FBECEB]/80 via-transparent to-transparent -z-0 rounded-full blur-2xl pointer-events-none"
+            className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-[#FBECEB]/80 via-transparent to-transparent -z-0 rounded-full blur-2xl pointer-events-none group-hover:scale-105 transition-transform duration-700"
           />
 
           <div className="relative z-10 max-w-2xl mx-auto">

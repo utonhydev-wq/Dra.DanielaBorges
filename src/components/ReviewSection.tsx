@@ -6,9 +6,9 @@ export const ReviewSection: React.FC = () => {
   return (
     <section id="avaliacoes" className="py-16 md:py-20 bg-[#FAF7F2] border-t border-[#E8DFD5]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-[#E8DFD5] shadow-xs text-center">
+        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-[#E8DFD5] shadow-xs hover:shadow-lg transition-all duration-500 hover:-translate-y-0.5 text-center group">
           {/* Review Star Icon */}
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#F7F3EE] text-[#C29B38] mb-6 border border-[#E8DFD5]">
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-[#F7F3EE] text-[#C29B38] mb-6 border border-[#E8DFD5] group-hover:scale-110 transition-transform duration-300">
             <Star className="w-7 h-7 fill-[#C29B38]" />
           </div>
 

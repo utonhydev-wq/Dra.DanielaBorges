@@ -16,11 +16,11 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 pb-10 border-b border-[#E8DFD5]">
           {/* Logo & Brand Name */}
           <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-            <div className="p-1.5 bg-white rounded-xl border border-[#E8DFD5] shadow-2xs">
+            <div className="p-2 bg-white rounded-2xl border border-[#E8DFD5] shadow-2xs hover:shadow-xs transition-shadow">
               <SafeImage
                 src={SITE_DATA.logoUrl}
                 alt="Logo Dra. Daniela Borges"
-                className="w-16 h-auto object-contain rounded-lg"
+                className="w-18 sm:w-20 h-auto object-contain rounded-xl"
                 fallbackText="Dra. Daniela Borges"
               />
             </div>

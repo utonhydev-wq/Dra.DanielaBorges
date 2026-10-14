@@ -8,6 +8,8 @@ export const GalleryCarousel: React.FC = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
 
+  const [isHovered, setIsHovered] = useState(false);
+
   // Touch tracking for mobile swipe
   const touchStartX = useRef<number | null>(null);
   const touchEndX = useRef<number | null>(null);
@@ -22,6 +24,15 @@ export const GalleryCarousel: React.FC = () => {
   const handleNext = useCallback(() => {
     setCurrentIndex((prev) => (prev === total - 1 ? 0 : prev + 1));
   }, [total]);
+
+  // Gentle auto-transition every 6s when not hovering or in lightbox
+  useEffect(() => {
+    if (isHovered || lightboxOpen) return;
+    const timer = setInterval(() => {
+      handleNext();
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [isHovered, lightboxOpen, handleNext]);
 
   const openLightbox = (index: number) => {
     setLightboxIndex(index);
@@ -102,7 +113,11 @@ export const GalleryCarousel: React.FC = () => {
         </div>
 
         {/* Carousel Container */}
-        <div className="relative bg-white rounded-3xl p-3 sm:p-5 border border-[#E8DFD5] shadow-md">
+        <div 
+          className="relative bg-white rounded-3xl p-3 sm:p-5 border border-[#E8DFD5] shadow-md transition-shadow duration-300 hover:shadow-lg"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           {/* Main Visual Display */}
           <div
             className="relative overflow-hidden rounded-2xl bg-[#EDE5DA] aspect-[4/3] sm:aspect-[16/10] max-h-[540px] cursor-pointer group"

@@ -8,7 +8,7 @@ export interface GalleryItem {
 export const SITE_DATA = {
   name: "Dra. Daniela Borges",
   title: "Dra. Daniela Borges | Site Oficial",
-  logoUrl: "https://i.postimg.cc/8CKRXfjQ/logo-Dr.jpg",
+  logoUrl: "https://i.postimg.cc/PJ7p10fB/Logo-melhor.jpg",
   aboutImageUrl: "https://i.postimg.cc/cCs8ssKh/dradanielaborges-1740775046-3578202895963023791-1324285564.jpg",
   
   links: {
