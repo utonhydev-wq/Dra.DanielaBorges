@@ -1,0 +1,6 @@
+{
+  "name": "Dra. Daniela Borges | Bio Site Oficial",
+  "description": "Bio site profissional e humanizado da Dra. Daniela Borges. Conheça sua história, galeria de fotos, localização e canais oficiais de contato via WhatsApp e Instagram.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
